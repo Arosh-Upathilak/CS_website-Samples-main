@@ -1,10 +1,11 @@
-FROM  node:18-alpine
-WORKDIR /app
-COPY package.json package-lock.json ./
-COPY . .
-RUN npm install
-CMD ["npm","run","start"]
+FROM node:alpine3.18 as build
 
+#Build App
+WORKDIR /App
+COPY package.json .
+RUN npm install
+COPY . .
+RUN npm run build
 
 #Serve with Nginx
 FROM nginx:1.23-alpine
