@@ -1,16 +1,32 @@
-FROM node:alpine3.18 as build
+# Use node:alpine as a base image for building the app
+FROM node:alpine3.18 AS build
 
-#Build App
+# Set the working directory
 WORKDIR /App
-COPY package.json .
+
+# Copy package.json and package-lock.json (if available)
+COPY package*.json ./
+
+# Install dependencies
 RUN npm install
+
+# Copy the rest of the application files
 COPY . .
+
+# Build the application
 RUN npm run build
 
-#Serve with Nginx
+# Use nginx:alpine as a base image for serving the built app
 FROM nginx:1.23-alpine
-WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
-COPY --from=build /App/build .
+
+# Remove the default nginx static files
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy built application files from the previous stage
+COPY --from=build /App/build /usr/share/nginx/html
+
+# Expose port 80
 EXPOSE 80
-ENTRYPOINT [ "nginx","-g","daemon off;"]
+
+# Start nginx in the foreground
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]

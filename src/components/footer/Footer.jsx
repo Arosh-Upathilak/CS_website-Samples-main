@@ -11,7 +11,7 @@ const Footer = () => {
       <div className=' custom__container footer__mainsection'>
         <div className='footer__container-01'>
           <div className='footer__container-01__logo'>
-              <img className='footerlogo'  src={LogoFooter}/>
+          <img className='footerlogo'  src={LogoFooter} alt='cs logo'/>
           </div>
           <div className='footer__container-01__SocialIcons'>
               <SocialIcon  style={{ height:'40px' , width:'40px '}} url="https://facebook.com" />
