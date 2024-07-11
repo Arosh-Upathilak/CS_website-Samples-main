@@ -64,6 +64,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Deployment Link: [http://13.60.30.95:3000/](http://13.60.17.138:3000/)
 
 ### `npm run build` fails to minify
 
