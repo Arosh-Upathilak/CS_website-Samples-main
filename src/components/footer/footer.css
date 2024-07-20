@@ -180,5 +180,8 @@
         width: 300px;
         height: 200px;
       }
+      .email h3,.address__text{
+        font-size: 20px;
+      }
   }
   
