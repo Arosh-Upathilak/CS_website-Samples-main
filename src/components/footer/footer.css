@@ -11,9 +11,10 @@
    min-height: 464px;
    padding: 3% 5%;
    display: flex;
+   align-items: start;
    flex-wrap: wrap;
    justify-content: space-between;
-    
+   flex-direction: row;
     background-color: #062451;
     gap: 50px;
 }
@@ -152,8 +153,8 @@
     width: 100%;
     min-height: 50px;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     background: #000;
 }
@@ -177,7 +178,7 @@
 
   @media (max-width: 438px) {
     iframe {
-        width: 300px;
+        width: 400px;
         height: 200px;
       }
   }
