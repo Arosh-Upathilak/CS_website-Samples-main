@@ -15,7 +15,7 @@ const Footer = () => {
     <div className='footer__container'>
 
       <div className='footer__container01'>
-        <img className='footerlogo'  src={LogoFooter} alt='cs logo' style={{ height:'95px' , width:'289px'}}/>
+        <img className='footerlogo'  src={LogoFooter} alt='cs logo' style={{ height:'100px' , width:'250px'}}/>
         <div className='footer_sub'> Subscribe for our newsletter: </div>
         <input className='footer__input' type='email' placeholder='Enter your email'/>
 
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
       </div>
       <div className='footer__container03'>
-        <iframe title="csDepartmentLocation" className="mapcontainer" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1966.4735136830504!2d80.01930569839477!3d9.685562500000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe54125cafe551%3A0x61d1a49bcd146dfe!2zRGVwYXJ0bWVudCBvZiBDb21wdXRlciBTY2llbmNlLCBVbml2ZXJzaXR5IG9mIEphZmZuYS4g4K6V4K6j4K6_4K6p4K6_IOCuheCuseCuv-CuteCuv-Cur-CusuCvjSDgrqTgr4HgrrHgr4gsIOCur-CuvuCutOCvjeCuquCvjeCuquCuvuCuo-CuruCvjSDgrqrgrrLgr43grpXgrrLgr4jgrpXgr43grpXgrrTgrpXgrq7gr40!5e0!3m2!1sen!2sus!4v1684678012881!5m2!1sen!2sus" width="462px" height="300px" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="csDepartmentLocation" className="mapcontainer" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1966.4735136830504!2d80.01930569839477!3d9.685562500000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe54125cafe551%3A0x61d1a49bcd146dfe!2zRGVwYXJ0bWVudCBvZiBDb21wdXRlciBTY2llbmNlLCBVbml2ZXJzaXR5IG9mIEphZmZuYS4g4K6V4K6j4K6_4K6p4K6_IOCuheCuseCuv-CuteCuv-Cur-CusuCvjSDgrqTgr4HgrrHgr4gsIOCur-CuvuCutOCvjeCuquCvjeCuquCuvuCuo-CuruCvjSDgrqrgrrLgr43grpXgrrLgr4jgrpXgr43grpXgrrTgrpXgrq7gr40!5e0!3m2!1sen!2sus!4v1684678012881!5m2!1sen!2sus" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 
