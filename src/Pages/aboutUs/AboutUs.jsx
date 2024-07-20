@@ -1,9 +1,13 @@
 import React from 'react'
+import { Footer, Navbar } from '../../components'
+import AboutSection  from './AboutUsSection/AboutUsSection'
 
 const AboutUs = () => {
   return (
     <div>
-      AboutUs
+      <Navbar/>
+      <AboutSection/>
+        <Footer/>
     </div>
   )
 }

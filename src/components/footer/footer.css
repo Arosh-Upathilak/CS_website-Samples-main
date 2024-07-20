@@ -1,161 +1,184 @@
 .footer{
-    background-color: var(--color-blue-700);
-    height: auto;
-   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: Inika;
 }
-
-.footer__mainsection{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap:10px;
+.footer .footer__container{
+   width: 100%;
+   min-height: 464px;
+   padding: 3% 5%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+    
+    background-color: #062451;
+    gap: 50px;
 }
-
-.footer__container-01,
-.footer__container-02{
-    width: 33.333%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.footer__container-03{
-    width: 33.333%;
+.footer__container01{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-}
-.footerlogo{
-    height: 6rem;
-    width: 16rem;
-   
-}
-
-.footer__container-01__SocialIcons{
-    display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: start;
     gap: 20px;
 }
-
-.footer__container-02{
-    gap: 15px;
+.footer_sub{
+    color: #E7A525;
+    text-align: start;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
-.footer__container-02__email{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 8px;
-    
-}
-.footer__container-02 .lato-bold{
-    color: var( --color-zinc-50);
+.footer__input{
+    width: 300px;
+    height: 29px;
+    border-radius: 10px;
+    background: #FFF;
+    padding: 0 10px;
+    color: rgba(0, 0, 0, 0.46);
+    text-align: start;
     font-size: 16px;
-    line-height: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
-
-
-.footer__container-02__address{
+.footer__policy{
     display: flex;
-    flex-direction: row;
-    gap: 8px;
-}
-
-.footer__container-03{
-
-    display: flex ; 
-    flex-direction: row ;
-    justify-content: flex-end ;
-}
-
-.mapcontainer{
-    height: 15rem;
-    width: 30rem;
-}
-
-.footer__botomSection{
-    background-color: var(--color-slate-950);
-    display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    height: 3rem;
-    color: var(--color-zinc-50);
-    text-align: center;
-    margin-top: 1rem;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.footer__policy_lable{
+    width: 15px;
+    height: 15px;
+    background: #FFF;
+    border-radius: 2px;
+    border: none;
+}
+.footer__policy h3{
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.footer__button{
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #F39238;
+    color: #000;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.footer__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.footer__social{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+}
+.footer__social Link{
+    cursor: pointer;
+}
+.icon-link{
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+.email__icon ,.address__icon{
+    color: #FFF;
+    width: 33px;
+    height: 30px;
+}
+.email h3,.address__text{
+    color: #FFF;
+    text-align: start;
+    font-family: Inika;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 
-@media screen and (max-width :900px) {
-
-
-
-    .footer__mainsection{
-        flex-wrap: wrap;
-        gap:20px;
-
-    }
-
-    .footer__container-01,
-    .footer__container-02{
-        width: 33.33%;
-        margin: 1px solid black;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        margin-bottom: 2rem;
-    }
-
-    .footer__container-03{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    
-    /* .footer__container-01{
-        gap: 15px;
-    } */
-
-    .footer__container-01__logo img{
-
-        height: 6rem;
-        width: 16rem;
-       
-    }
-    .mapcontainer{
-        height: 15rem;
-        width: 100%;
-    }
- 
+.footer__container02{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    flex-direction: column;
 }
-@media screen and (max-width :600px) {
-    .footer__mainsection{
-        flex-direction: column;
+.footer__container02 .email{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    flex-direction: row;
+}
+.address{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    flex-direction: row;
+}
+.address__text{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
 
-    }
-    .footer__container-01,
-    .footer__container-02{
-        width: 100%;
-        margin: 1px solid black;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        margin-bottom: 2rem;
-    }
+.footer__bottom{
+    padding: 1% 5%;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    background: #000;
+}
+.footer__bottom span{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 
-@media screen and (max-width :300px){
-    .footer__container-01__logo img{
 
-        height: 6rem;
-        width: 10rem;
-       
+  @media (max-width: 550px) {
+    iframe {
+      width: 400px;
+      height: 200px;
     }
-    .footer__botomSection{
-        height: 5rem;
-    }
-}
+  }
+
+  @media (max-width: 438px) {
+    iframe {
+        width: 300px;
+        height: 200px;
+      }
+  }
+  
