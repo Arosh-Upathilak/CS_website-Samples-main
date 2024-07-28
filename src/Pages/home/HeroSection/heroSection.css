@@ -5,6 +5,41 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-image: url(../../../assests/images/unsplash_EUsVwEOsblE.png);
+    background-position: "center";
+    background-repeat: "no-repeat";     
+    position: relative;
+    background-size: cover; 
+}
+
+
+.text_container{
+   background-color: rgba(0, 0, 0, 0.5); /* 50% transparent black */
+   padding: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.text_container h1{
+    color: #FFFFFF;
+    font-size: 36px;
+    line-height: 43.16px;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    -webkit-text-stroke: 0.5px black;
+    text-stroke: 0.5px black;
+    width: 50%;
+
+}
+
+.aboutUs_container{
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    height: 100%;
+    align-items: stretch;
     line-height: 3rem;
 }
 
