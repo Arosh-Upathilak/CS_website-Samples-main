@@ -86,7 +86,7 @@ const HeroSection = () => {
           </div>
 
         </div>
-        
+
       </div>
 
       <ContactUs/>
