@@ -57,9 +57,8 @@ const Footer = () => {
 
     <div className='footer__bottom'>
       <span>IEEE Computer Society Student Branch University of Jaffna</span>
-      <span>Copyright 2024 CS IEEE SB Chapter of UOJ - ALL right reserved.</span>
-      <span>Use of this Web site signifies your agreement to the CS IEEE SB Chapter of UOJ Teams and Conditions.</span>
-      <span>A not-for-profit organization, IEEE is the world’s largest technical professional organization dedicated to advancing technology for the benefits of humanity.</span>
+      <span>Copyright © 2024 CS IEEE SB Chapter of UOJ - ALL rights reserved.</span>
+      
     </div>
 
     </div>
