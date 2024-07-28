@@ -26,7 +26,9 @@ const Navbar = () => {
               <Link to='/' className='nav__link lato-bold' onClick={() => setClicked(false)}>Home</Link>
               <Link to='/aboutUs' className='nav__link lato-bold' onClick={() => setClicked(false)}>About Us</Link>
               <Link to='/committee' className='nav__link lato-bold' onClick={() => setClicked(false)}>Committee</Link>
-              <Link to='/PastActivities' className='nav__link lato-bold' onClick={() => setClicked(false)}>Past Activities</Link>
+              <Link to='/News' className='nav__link lato-bold' onClick={() => setClicked(false)}>News</Link>
+              <Link to='/Event' className='nav__link lato-bold' onClick={() => setClicked(false)}>Event</Link>
+              <Link to='/Achivement' className='nav__link lato-bold' onClick={() => setClicked(false)}>Achivement</Link>
               <Link to='/ContactUs' className='nav__link lato-bold' onClick={() => setClicked(false)}>Contact Us</Link>
             </ul>
 

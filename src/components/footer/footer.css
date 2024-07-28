@@ -166,7 +166,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
     background: #000;
+    text-align: center;
 }
 
 .footer__bottom span {
