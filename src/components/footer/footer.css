@@ -1,4 +1,4 @@
-.footer{
+.footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,25 +6,32 @@
     outline: none;
     font-family: Inika;
 }
-.footer .footer__container{
-   width: 100%;
-   min-height: 464px;
-   padding: 3% 5%;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-    
+
+.footer .footer__container {
+    width: 100%;
+    min-height: 464px;
+    padding: 3% 5%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: row; 
     background-color: #062451;
     gap: 50px;
+
 }
-.footer__container01{
+
+.footer__container01,
+.footer__container02,
+.footer__container03 {
+    width: 32%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     gap: 20px;
 }
-.footer_sub{
+
+.footer_sub {
     color: #E7A525;
     text-align: start;
     font-size: 24px;
@@ -33,7 +40,7 @@
     line-height: normal;
 }
 
-.footer__input{
+.footer__input {
     width: 300px;
     height: 29px;
     border-radius: 10px;
@@ -46,7 +53,8 @@
     font-weight: 700;
     line-height: normal;
 }
-.footer__policy{
+
+.footer__policy {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -54,21 +62,24 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-.footer__policy_lable{
+
+.footer__policy_lable {
     width: 15px;
     height: 15px;
     background: #FFF;
     border-radius: 2px;
     border: none;
 }
-.footer__policy h3{
+
+.footer__policy h3 {
     color: #FFF;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
-.footer__button{
+
+.footer__button {
     width: 70px;
     height: 25px;
     border-radius: 5px;
@@ -79,7 +90,8 @@
     font-weight: 600;
     line-height: normal;
 }
-.footer__title{
+
+.footer__title {
     color: #FFF;
     font-family: Inter;
     font-size: 21px;
@@ -87,28 +99,33 @@
     font-weight: 600;
     line-height: normal;
 }
-.footer__social{
+
+.footer__social {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 20px;
     flex-direction: row;
 }
-.footer__social Link{
+
+.footer__social Link {
     cursor: pointer;
 }
-.icon-link{
+
+.icon-link {
     width: 30px;
     height: 30px;
     background-color: #FFF;
     border-radius: 5px;
 }
-.email__icon ,.address__icon{
+
+.email__icon, .address__icon {
     color: #FFF;
     width: 33px;
     height: 30px;
 }
-.email h3,.address__text{
+
+.email h3, .address__text {
     color: #FFF;
     text-align: start;
     font-family: Inika;
@@ -118,46 +135,41 @@
     line-height: normal;
 }
 
-
-.footer__container02{
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    gap: 20px;
-    flex-direction: column;
-}
-.footer__container02 .email{
+.footer__container02 .email {
     display: flex;
     justify-content: start;
     align-items: start;
     gap: 20px;
     flex-direction: row;
 }
-.address{
+
+.address {
     display: flex;
     justify-content: start;
     align-items: start;
     gap: 20px;
     flex-direction: row;
 }
-.address__text{
+
+.address__text {
     display: flex;
     justify-content: start;
     align-items: start;
     flex-direction: column;
 }
 
-.footer__bottom{
+.footer__bottom {
     padding: 1% 5%;
     width: 100%;
     min-height: 50px;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     background: #000;
 }
-.footer__bottom span{
+
+.footer__bottom span {
     color: #FFF;
     font-family: Inter;
     font-size: 13px;
@@ -179,9 +191,6 @@
     iframe {
         width: 300px;
         height: 200px;
-      }
-      .email h3,.address__text{
-        font-size: 20px;
       }
   }
   
