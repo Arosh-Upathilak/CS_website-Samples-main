@@ -1,7 +1,40 @@
-import React from 'react'
-import './heroSection.css'
+import React, { useState, useEffect, useRef } from 'react';
+import './heroSection.css';
+import ContactUs from '../../../components/ContactUs/ContactUs';
 
 const HeroSection = () => {
+  const events = [
+    { title: "Event 1", description: "Description for event 1" },
+    { title: "Event 2", description: "Description for event 2" },
+    { title: "Event 3", description: "Description for event 3" },
+    { title: "Event 4", description: "Description for event 4" },
+    { title: "Event 5", description: "Description for event 5" },
+    { title: "Event 6", description: "Description for event 6" },
+    { title: "Event 7", description: "Description for event 7" },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [eventsPerPage, setEventsPerPage] = useState(3);
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const containerWidth = sliderRef.current.offsetWidth;
+      const eventWidth = 200; 
+      const perPage = Math.floor(containerWidth / eventWidth);
+      setEventsPerPage(perPage);
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div>
       <div className='heroSection_mainContainer'>
@@ -58,7 +91,7 @@ const HeroSection = () => {
 
       <ContactUs/>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
