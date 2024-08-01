@@ -4,7 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
-    font-family: Inika;
+    font-family: 'Inter', sans-serif;
 }
 
 .footer .footer__container {
@@ -15,7 +15,7 @@
     align-items: start;
     justify-content: space-between;
     flex-direction: row; 
-    background-color: #062451;
+    background-color: #113d67;
     gap: 50px;
 
 }
@@ -75,20 +75,21 @@
     color: #FFF;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
+    margin-top: 10px;
 }
 
 .footer__button {
-    width: 70px;
-    height: 25px;
-    border-radius: 5px;
-    background-color: #F39238;
-    color: #000;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #FFA300;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .footer__title {
@@ -101,22 +102,37 @@
 }
 
 .footer__social {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 20px;
-    flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
 }
 
-.footer__social Link {
-    cursor: pointer;
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 50%;
+  color: #113d67;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
 }
 
-.icon-link {
-    width: 30px;
-    height: 30px;
-    background-color: #FFF;
-    border-radius: 5px;
+.social-icon:hover {
+  background-color: #FFA300;
+  color: #FFF;
+}
+
+.social-icon.linkedin {
+  background-color: #FFF;
+  color: #113d67;
+}
+
+.social-icon.linkedin:hover {
+  background-color: #FFA300;
 }
 
 .email__icon, .address__icon {
@@ -125,13 +141,12 @@
     height: 30px;
 }
 
-.email h3, .address__text {
+.email h3, .address__text h3{
     color: #FFF;
     text-align: start;
-    font-family: Inika;
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
 }
 

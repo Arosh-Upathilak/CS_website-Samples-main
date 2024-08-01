@@ -25,12 +25,17 @@ const Footer = () => {
         <button className='footer__button'>Subscribe</button>
 
         <h2 className='footer__title'>Follow us on social media</h2>
-        <div className='footer__social'>
-              <Link ><FontAwesomeIcon icon={faFacebook} style={{height: '30px', width: '30px', color: "#ffffff"}} /></Link>
-              <Link ><FontAwesomeIcon className='icon-link' icon={faLinkedinIn} style={{ height: '30px', width: '30px', color: '#062451' }} /></Link>
-              <Link><FontAwesomeIcon icon={faInstagram} style={{height: '30px', width: '30px',color: "#ffffff",}} /></Link>
-             
-        </div>
+        <div className="footer__social">
+            <Link to="https://www.facebook.com/IEEECSUOJ?mibextid=ZbWKwL" className="social-icon">
+              <FontAwesomeIcon icon={faFacebook} />
+            </Link>
+            <Link to="https://www.linkedin.com/company/ieeecsuoj/" className="social-icon linkedin">
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </Link>
+            <Link to="#" className="social-icon">
+              <FontAwesomeIcon icon={faInstagram} />
+            </Link>
+          </div>
       </div>
 
       <div className='footer__container02'>
@@ -41,11 +46,11 @@ const Footer = () => {
           <div className='address'> 
             <MdLocationPin className='address__icon'/>
             <div className='address__text'>
-              <span>Department of Computer Science,</span>
-              <span>Faculty of Science,</span>
-              <span>University of Jaffna,</span>
-              <span>Jaffna</span>
-              <span>Sri Lanka</span>
+              <h3>Department of Computer Science,</h3>
+              <h3>Faculty of Science,</h3>
+              <h3>University of Jaffna,</h3>
+              <h3>Jaffna</h3>
+              <h3>Sri Lanka</h3>
             </div>
 
           </div>

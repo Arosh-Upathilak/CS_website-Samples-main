@@ -76,7 +76,7 @@
 }
 
 .searchbar_default button {
-    background-color: var(--color-Amber-400);
+    background-color: #FFA300;
     border: none;
     outline: none;
     padding: 4px 16px;

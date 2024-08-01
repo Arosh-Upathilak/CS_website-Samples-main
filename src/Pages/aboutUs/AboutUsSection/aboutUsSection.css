@@ -1,3 +1,6 @@
+body{
+    background: #f7f9fc;
+  }
 .aboutSection_textMainContainer{
     background-image: url('../../../assests/images/aboutUs_background.jfif');
     background-size: cover;
@@ -9,6 +12,7 @@
     align-items: flex-end;
     min-height: 70vh;
    margin-top: 120px;
+   
 }
 
 
