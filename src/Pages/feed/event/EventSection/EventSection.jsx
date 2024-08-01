@@ -56,7 +56,7 @@ const EventSection = () => {
 
         <div className="eventContainer">
 
-        <div className='applyNowButton_container'>
+        <div className='applyNowButton_container_event'>
           <button>
             Apply Now
           </button>

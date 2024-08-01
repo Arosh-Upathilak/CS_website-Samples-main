@@ -15,18 +15,16 @@
     min-height: 50vh;
 }
 
-.applyNowButton_container button{
-    width: 200px;
-    height: 60px;
+.applyNowButton_container_event button{
+    width: 120px;
+    height: 40px;
     border-radius: 50px;
     background-color:#F8AF41;
     font-family: "Inter", sans-serif;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
-    border: 1px solid black;
     margin-top: 35vh;
     margin-left: 15vh;
 }
