@@ -13,7 +13,6 @@
     width: 100%;
     height: 120px;
     z-index: 9999;
-    color: black; 
     font-family: Inter;
     font-size: 20px;
     font-weight: 600;
@@ -33,7 +32,7 @@
     text-align: center;
     gap: 30px;
     background-color: white;
-    color: black; 
+    
 }
 
 .navbar-custom .navbar-collapse {
@@ -41,7 +40,7 @@
 }
 
 .navbar-custom .nav-link {
-    color: black; 
+    color: black;
 }
 
 .navbar-custom .dropdown-menu {
@@ -49,7 +48,7 @@
 }
 
 .navbar-custom .dropdown-item {
-    color: black; 
+    color: black;
     font-family: Inter;
     font-size: 17px;
     font-weight: 600;
@@ -73,7 +72,7 @@
     border: none;
     outline: none;
     padding: 4px 12px;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .searchbar_default button {
@@ -168,3 +167,33 @@
         color: black;
     }
 }
+
+
+
+
+
+.navbar-custom .nav-link {
+    color: black;
+  }
+  
+  .navbar-custom .nav-link.active {
+    color: black; 
+    font-weight: 800;
+  }
+  
+  .navbar-custom .dropdown-menu {
+    background-color: rgba(227, 230, 232, 1); 
+  }
+  
+  .navbar-custom .dropdown-item {
+    color: black; 
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 20.57px;
+  }
+  
+  .navbar-custom .dropdown-item:hover {
+    background-color: rgba(10, 102, 194, 0.26);
+  }
+  
