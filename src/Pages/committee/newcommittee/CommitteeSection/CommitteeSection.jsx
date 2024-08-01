@@ -3,7 +3,7 @@ import './committeeSection.css';
 
 const CommitteeSection = () => {
     return (
-        <div>
+        <div className="committe">
         <h1>Committee Section</h1>
         </div>
     );

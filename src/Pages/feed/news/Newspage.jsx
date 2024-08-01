@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer, Navbar } from "../../components";
+import { Footer, Navbar } from '../../../components'
 import NewsSection from "./NewsSection/NewsSection";
 
 const News = () => {

@@ -3,7 +3,7 @@ import './newsSection.css';
 
 const NewsSection = () => {
     return (
-        <div>
+        <div className="news">
         <h1>News Section</h1>
         </div>
     );
