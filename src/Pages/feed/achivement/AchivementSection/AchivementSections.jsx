@@ -4,7 +4,7 @@ import './achivementSection.css';
 const AchivementSections = () => {
     
         return (
-            <div>
+            <div className="achivement">
             <h1>Achivement Section</h1>
             </div>
         );
