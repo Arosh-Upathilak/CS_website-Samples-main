@@ -11,7 +11,7 @@ const Navbar = () => {
   const toggleIcon = () => {
     setClicked(!clicked);
   };
-
+ 
   return (
     <nav className='nav__section'>
       <div className='header__mainContainer'>
