@@ -67,7 +67,6 @@
     font-size: 30px;
     font-family: Inter;
     font-weight: 600;
-    animation: slideInLeft 1.5s forwards;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -125,4 +124,29 @@
     color: #222;
     margin-bottom: 30px;
     font-family: Inter;
+  }
+
+
+
+  @media (max-width: 500px){
+    .text_container h1 {
+        font-size: 30px;
+        width: 100%;
+    }
+    .aboutUs_container{
+        margin-left: 30px;
+        height: 35rem;
+    }
+    .aboutUs_description h1 {
+        font-size: 20px;
+    }
+    .aboutUs_description p {
+        font-size: 10px;
+    }
+    .readMore_button{
+        padding: 5px 10px;
+        font-size: 10px;
+        font-weight: none;
+
+    }
   }
