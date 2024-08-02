@@ -1,4 +1,275 @@
 .achivement{
     margin-top: 120px;
-    background: #f7f9fc;
+    
+
 }
+
+.awards_text{
+    margin-left: 10%;
+    font-family: "Inika", serif;
+    font-style: normal;
+    text-align: start;
+    font-weight:700;
+    font-size: 36px;
+    line-height: 46.91px;
+    margin-top: 8%;
+
+}
+
+.awards_mainContainer{
+    min-height: 70vh;
+    
+}
+
+.awards_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  
+    
+}
+
+
+
+.awards_container2{
+    background-color: #082C63;
+    width: 35%;
+    height: 80vh;
+    border-radius: 20px;
+    margin: 2% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.awardsPhotos_container{
+    width: 86%;
+    height: 60%;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.awards_container h3{
+    font-family: "Inika", serif;
+    text-align:center;
+    font-style: normal;
+    font-weight:550;
+    font-size: 18px;
+    line-height: 46.91px;
+
+}
+
+.awardsPhotos_container h3{
+    color: black;
+}
+
+.awardTitle_text , .description_text{
+    color: white;
+    padding-top: 0px;
+}
+
+.description_container{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5%;
+    padding-top: 0px;
+    
+   
+
+}
+
+.grants_container1{
+   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grants_container2{
+    background-color: #082C63;
+    width: 35%;
+    height: 60vh;
+    margin: 2% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8%;
+}
+
+@media (max-width:1200px) {
+    .awards_container2{
+        background-color: #082C63;
+        width: 35%;
+        height: 65vh;
+        
+       
+       
+    }
+    
+    .awardsPhotos_container{
+        width: 80%;
+        height: 50%;
+     
+    
+    }
+
+}
+
+@media (max-width:920px) {
+    .awards_container2{
+        background-color: #082C63;
+        width: 35%;
+        height: 60vh;
+        
+       
+       
+    }
+    
+    .awardsPhotos_container{
+        width: 80%;
+        height: 50%;
+     
+    
+    }
+
+}
+
+@media (max-width:820px) {
+
+.grants_container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grants_container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+   
+    
+}
+
+.awards_text{
+    font-weight:650;
+    font-size: 30px;
+    line-height: 40.91px;
+    margin-top: 8%;
+
+}
+
+.awards_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    
+}
+
+.awards_container2{
+    width: 80%;
+    height: 80vh;
+    margin-bottom: 30px;
+    
+  
+   
+}
+}
+
+@media (max-width:520px) {
+
+    .awards_text{
+        font-weight:650;
+        font-size: 28px;
+        line-height: 36.91px;
+        margin-top: 8%;
+    
+    }
+    .awards_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      
+        
+    }
+    
+    .awards_container2{
+        width: 80%;
+        height: 60vh;
+        
+      
+       
+    }
+
+    .awards_container h3{
+        font-weight:550;
+        font-size: 16px;
+        line-height: 42.91px;
+    
+    }
+
+    .grants_container2{
+        height: 60vh;
+       
+        
+    }
+
+    
+    
+
+}
+
+@media (max-width:420px){
+    .awards_text{
+        font-weight:650;
+        font-size: 26px;
+        line-height: 34.91px;
+        margin-top: 8%;
+    
+    }
+
+    .awards_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      
+        
+    }
+    
+    .awards_container2{
+        width: 80%;
+        height: 55vh;
+        
+      
+       
+    }
+
+    .grants_container2{
+        height: 55vh;
+       
+        
+    }
+
+
+}
+

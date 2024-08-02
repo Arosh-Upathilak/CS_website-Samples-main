@@ -1,7 +1,166 @@
-body{
-    background: #f7f9fc;
-  }
 .contact{
     margin-top: 120px;
+    background-image: url('../../../assests/images/contactUs_Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
    
+}
+
+.contactForm_container{
+    background-color: #051D41;
+    opacity: 83%;
+    width: 47%;
+    min-height: 73vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    
+}
+
+.contactForm_container form{
+    width: 80%;
+    margin-top: 15px;
+}
+
+.contactUs_label{
+    font-family: "Inika", serif;
+    text-align:center;
+    font-style: normal;
+    color:#E9CB2B;
+    font-weight:600;
+    font-size: 26px;
+    line-height: 32.12px;
+    margin-top: 5px;
+  
+
+}
+
+.contactUs_inputMain{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    margin-bottom: 8%;
+  
+}
+
+.contactUs_input{
+    border-radius: 6px;
+    margin-left: 2%;
+    width: 100%;
+    padding-left: 10px; 
+    background-color: #C5BFBF;
+
+}
+
+.sendButton_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.send_button{
+    width: 77px;
+    height: 36px;
+    border-radius: 50px;
+    background-color: #F39238;
+    font-family: "Inter", serif;
+    color: white;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: 1px solid black;
+}
+
+@media (max-width:1050px) {
+    .contactUs_label{
+        font-weight:600;
+        font-size: 22px;
+        line-height: 28.12px;
+    
+    }
+    .contactForm_container{
+        border-radius: 40px;
+        width: 60%;
+    }
+}
+
+@media (max-width:700px) {
+    .contactUs_label{
+        font-weight:550;
+        font-size: 20px;
+        line-height: 24.12px;
+    
+    }
+
+    .contactForm_container{
+        border-radius: 30px;
+        width: 60%;
+        min-height: 55vh;
+    }
+
+    .contactUs_inputMain{
+        height: auto; 
+        margin-bottom: 20px;
+      
+    }
+}
+
+@media (max-width:480px) {
+    .contactUs_label{
+        font-weight:550;
+        font-size: 16px;
+        line-height: 22.12px;
+    
+    }
+
+    .contactForm_container{
+        border-radius: 25px;
+        width: 80%;
+        min-height: 45vh;
+        
+    }
+
+    .send_button{
+        width: 70px;
+        height: 32px;
+        border-radius: 50px;
+        font-size: 11px;
+       
+        
+    }
+
+
+    .contactForm_container form{
+        margin-top: 30px;
+    }
+    
+    .contactUs_label{
+        margin-top: 0px;
+      
+    
+    }
+    
+    .contactUs_inputMain{
+        height: auto; 
+        margin-bottom: 10px;
+      
+    }
+
+    .sendButton_container{
+        margin-bottom: 10px;
+    }
+    
+    
 }
