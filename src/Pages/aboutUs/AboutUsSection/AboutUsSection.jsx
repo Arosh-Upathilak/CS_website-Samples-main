@@ -10,8 +10,10 @@ const AboutUsSection = () => {
   return (
     <div className='aboutSection_mainContainer'>
       <div className='aboutSection_textMainContainer'>
-        <div className='aboutSection_textContainer'>
           <h1 className='aboutUs_textHeading'>ABOUT US</h1>
+      </div>
+
+      <div className='aboutSection_textContainer'>
           <h3 className='aboutUs_text1'>Empowering Future Leaders in Computer Science and Engineering</h3>
 
           <p className='aboutUs_text2'><span>The IEEE Computer Society Student Branch at the University of Jaffna 
@@ -23,33 +25,27 @@ const AboutUsSection = () => {
             branch aims to drive technological advancements and professional growth, 
             preparing students to become leaders in the ever-evolving field of computing.
           </span></p>
-        </div>
+       
 
       </div>
 
-      <div>
+      <div className='visionMission_mainContainer'>
+
         <div className='vision_mainContainer'>
-          <div className='aboutUs_imageContainer-1'>
-            <img src={WorkBeingCreative01} className='teamWork01' alt='teamwork' />
-
-
-          </div>
           <div className='vision_container'>
             <h1>VISION</h1>
-
           </div>
         </div>
 
         <div className='mission_mainContainer'>
-          <div className='aboutUs_imageContainer-2'>
-          <img src={WorkBeingCreative02} className='teamWork02' alt='teamwork' />
-
-
-          </div>
           <div className='mission_container'>
           <h1>MISSION</h1>
           </div>
         </div>
+
+      </div> 
+
+      
         <div className='paragraph-01_mainContainer'>
         <div className='paragraph-01'>
           <p>Join the dynamic IEEE Computer Society Student Branch at University of Jaffna.</p>
@@ -58,37 +54,39 @@ const AboutUsSection = () => {
         </div>
         </div>
         
-      </div>
+      
 
       <div className='reasonWhy_mainContainer'>
-        <h1>Reasons why you should join us</h1>
+        <h1>Why Become a Member</h1>
         <div className='arrowsWithButton_container'>
+
           <div className='arrows_container'>
+
           <div class="arrow-right">
+            <div className='image1'></div>
             <h3>
             Gain hands-on experience with the latest technologies through workshops and projects.
             </h3>
           </div>
+
           <div class="arrow-right">
+          <div className='image2'></div>
             <h3>Connect with industry professionals and like-minded peers.</h3>
           </div>
+
           <div class="arrow-right">
+          <div className='image3'></div>
             <h3>Develop leadership and teamwork skills by participating in branch activities and events.</h3>
           </div>
 
           <div class="arrow-right">
+          <div className='image4'></div>
             <h3>Be a part of a worldwide network of IEEE members and professionals.</h3>
           </div>
 
 
           </div>
 
-          <div className='joinusButton_container'>
-          <button>
-            Join Now
-          </button>
-
-          </div>
         </div>
         
 
