@@ -116,15 +116,61 @@
 }
 
 
-.previous_event_container{
-    padding: 20px 5%;
-}
-.previous_event_container h1 {
-    font-size: 2.5rem;
-    color: #222;
-    margin-bottom: 30px;
-    font-family: Inter;
+.previous_event_container_hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  
+  .events_hero {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .event_hero {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%; 
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5b61e;
+    min-height: 50vh;
+  }
+
+  .event_hero p{
+    margin-left: 50px;
+  }
+
+  .prev_button, .next_button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  .prev_button {
+    left: 10px;
+  }
+  
+  .next_button {
+    right: 10px;
+  }
+  
+  .prev_button:hover, .next_button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+
 
 
 
