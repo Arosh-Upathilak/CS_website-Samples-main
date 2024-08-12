@@ -125,6 +125,14 @@
     justify-content: center;
     align-items: center;
   }
+  .slider_container{
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #F8AF41;
+  }
   
   .events_hero {
     display: flex;
@@ -138,7 +146,7 @@
     padding: 20px;
     align-items: center;
     justify-content: center;
-    background-color: #f5b61e;
+
     min-height: 50vh;
   }
 
@@ -169,6 +177,26 @@
   .prev_button:hover, .next_button:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
+
+  .dots_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #FFA300;
+}
   
 
 

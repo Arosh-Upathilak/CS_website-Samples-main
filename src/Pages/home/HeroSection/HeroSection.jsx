@@ -21,9 +21,9 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length);
-    }, 5000); 
+    }, 5000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [events.length]);
 
   const goToNextSlide = () => {
@@ -34,6 +34,10 @@ const HeroSection = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? events.length - 1 : prevIndex - 1
     );
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
   };
 
   return (
@@ -93,6 +97,16 @@ const HeroSection = () => {
           <button className="next_button" onClick={goToNextSlide}>
             &#8250;
           </button>
+        </div>
+
+        <div className="dots_container">
+          {events.map((_, index) => (
+            <div
+              key={index}
+              className={`dot ${currentIndex === index ? "active" : ""}`}
+              onClick={() => goToSlide(index)}
+            ></div>
+          ))}
         </div>
       </div>
 
