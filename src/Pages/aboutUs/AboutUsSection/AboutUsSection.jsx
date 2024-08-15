@@ -1,7 +1,6 @@
 import React from 'react'
 import './aboutUsSection.css'
-import WorkBeingCreative01 from '../../../assests/images/Work-Being-creative-01.png'
-import WorkBeingCreative02 from '../../../assests/images/Work-About-Us-About-our-team-01.png'
+
 
 
 

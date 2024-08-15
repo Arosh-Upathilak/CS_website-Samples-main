@@ -16,7 +16,7 @@
 
 
 .aboutSection_textContainer h3{
-    font-family: "Inika", serif;
+    font-family: Inter;
     text-align:center;
     font-style: normal;
     color:#F8AF41;
@@ -28,14 +28,14 @@
 }
 
 .aboutSection_textContainer p{
-    font-family: "Inika", serif;
+    font-family: Inter;
     text-align:center;
     font-style: normal;
     color: black;
-    font-weight:700;
+    font-weight:600;
     font-size: 22px;
     line-height: 41.7px;
-   
+
 
 }
 
@@ -85,7 +85,7 @@
     
 }
 .paragraph-01 p{
-    font-family: "Inika", serif;
+    font-family: Inter;
     text-align:center;
     font-style: normal;
     color: black;
