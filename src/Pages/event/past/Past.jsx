@@ -1,14 +1,14 @@
 import React from "react";
 import { Footer, Navbar } from '../../../components'
-import EventSection from "./EventSection/EventSection";
+import PastSection from "./PastSection/PastSection";
 
-const Event = () => {
+const Past = () => {
     return (
         <>
         <Navbar />
-        <EventSection />
+        <PastSection />
         <Footer />
         </>
     );
     }
-export default Event;
+export default Past;

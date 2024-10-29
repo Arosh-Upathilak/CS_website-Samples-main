@@ -1,15 +1,17 @@
 import React from 'react'
 import './aboutUsSection.css'
 
-
-
-
-
 const AboutUsSection = () => {
   return (
     <div className='aboutSection_mainContainer'>
-      <div className='aboutSection_textMainContainer'>
-          <h1 className='aboutUs_textHeading'>ABOUT US</h1>
+      
+       <div className="heroSection_mainContainer">
+        <div className="text_container">
+          <h1 className="lato-bold">
+            Empower Your Future in Tech: Welcome to the IEEE Computer Society
+            Student Branch University of Jaffna!
+          </h1>
+        </div>
       </div>
 
       <div className='aboutSection_textContainer'>

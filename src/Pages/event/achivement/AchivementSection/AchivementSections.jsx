@@ -27,8 +27,6 @@ const AchivementSections = () => {
                             <h3 className="description_text">Description</h3>
                         </div>
                     </div>
-
-
                     
                 </div>
 

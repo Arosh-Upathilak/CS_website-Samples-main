@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect,useRef } from "react";
-import "./eventSection.css";
+import "./PastSection.css";
 
-const EventSection = () => {
+const PastSection = () => {
 
      const events = [
     { title: "Event 1", description: "Description for event 1" },
@@ -54,19 +54,9 @@ const EventSection = () => {
     return (
     <div className="eventSection">
 
-        <div className="eventContainer">
-
-        <div className='applyNowButton_container_event'>
-          <button>
-            Apply Now
-          </button>
-          </div>
-
-       
-        </div>
 
         <div className="upcomingEventsContainer">
-            <h1>Upcoming Events</h1>
+            <h1>Past Events</h1>
 
               <div className="eventDetailsContainer">
                 <div className="dateContainer">
@@ -113,4 +103,4 @@ const EventSection = () => {
 
     </div>
     )};
-export default EventSection;
+export default PastSection;

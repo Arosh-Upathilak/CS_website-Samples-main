@@ -1,14 +1,14 @@
 import React from "react";
 import { Footer, Navbar } from '../../../components'
-import NewsSection from "./NewsSection/NewsSection";
+import UpcomingSection from "./upcomingSecion/UpcomingSecion";
 
-const News = () => {
+const Upcoming = () => {
     return (
         <>
         <Navbar />
-        <NewsSection />
+        <UpcomingSection />
         <Footer />
         </>
     );
-    };
-export default News;
+    }
+export default Upcoming;

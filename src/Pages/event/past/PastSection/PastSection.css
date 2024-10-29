@@ -8,26 +8,6 @@
     width: 100%;
 }
 
-.eventContainer {
-    display: flex;
-    background-color: #02193C;
-    width: 100%;
-    min-height: 50vh;
-}
-
-.applyNowButton_container_event button{
-    width: 120px;
-    height: 40px;
-    border-radius: 50px;
-    background-color:#F8AF41;
-    font-family: "Inter", sans-serif;
-    color: white;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 35vh;
-    margin-left: 15vh;
-}
 
 .upcomingEventsContainer {
     display: flex;
