@@ -1,38 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./heroSection.css";
 import ContactUs from "../../../components/ContactUs/ContactUs";
 import { Link } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
+import Image1 from "../../../assests/images/UOJCoders.jpg";
+import Image2 from "../../../assests/images/image2.jpg"; 
+import Image3 from "../../../assests/images/image3.jpg";
+import Image4 from "../../../assests/images/image4.jpg";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+
 
 const HeroSection = () => {
-  const events = [
-    { title: "Event 1", description: "Description for event 1" },
-    { title: "Event 2", description: "Description for event 2" },
-    { title: "Event 3", description: "Description for event 3" },
-    { title: "Event 4", description: "Description for event 4" },
-    { title: "Event 5", description: "Description for event 5" },
-    { title: "Event 6", description: "Description for event 6" },
-    { title: "Event 7", description: "Description for event 7" },
-  ];
-
+  const images = [Image1, Image2, Image3, Image4];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const sliderRef = useRef(null);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
-
     return () => clearInterval(interval);
-  }, [events.length]);
+  }, [currentIndex, images.length]);
+  
 
   const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const goToPrevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? events.length - 1 : prevIndex - 1
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
@@ -42,22 +39,35 @@ const HeroSection = () => {
 
   return (
     <div>
-      <div className="heroSection_mainContainer">
-        <div className="text_container">
-          <h1 className="lato-bold">
-            Empower Your Future in Tech: Welcome to the IEEE Computer Society
-            Student Branch University of Jaffna!
-          </h1>
+      <div className="home_event">
+        <div className="home_event_image">
+          <img src={images[currentIndex]} alt="home_event" />
+          {/* Left Arrow */}
+          <button className="arrow left-arrow" onClick={goToPrevSlide}>
+  <FaArrowLeft />
+</button>
+
+<button className="arrow right-arrow" onClick={goToNextSlide}>
+  <FaArrowRight />
+</button>
+
+          {/* Dots for each image */}
+          <div className="dots-container">
+            {images.map((_, index) => (
+              <span
+                key={index}
+                className={`dot ${index === currentIndex ? "active" : ""}`}
+                onClick={() => goToSlide(index)}
+              ></span>
+            ))}
+          </div>
         </div>
       </div>
 
       <div className="aboutUs_container">
         <div className="aboutUs_text">
-          <h1>
-            ABOUT <br /> US
-          </h1>
+          <h1>ABOUT US</h1>
         </div>
-
         <div className="aboutUs_description">
           <h1>Empowering Future Leaders in Computer Science and Engineering</h1>
           <p>
@@ -70,43 +80,6 @@ const HeroSection = () => {
           <Link to="">
             <button className="readMore_button">Read More</button>
           </Link>
-        </div>
-      </div>
-
-      <div className="previous_event_container_hero">
-        <h1>PREVIOUS EVENTS</h1>
-
-        <div className="slider_container">
-          <button className="prev_button" onClick={goToPrevSlide}>
-            &#8249;
-          </button>
-
-          <div
-            className="events_hero"
-            ref={sliderRef}
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {events.map((event, index) => (
-              <div className="event_hero" key={index}>
-                <h2>{event.title}</h2>
-                <p>{event.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <button className="next_button" onClick={goToNextSlide}>
-            &#8250;
-          </button>
-        </div>
-
-        <div className="dots_container">
-          {events.map((_, index) => (
-            <div
-              key={index}
-              className={`dot ${currentIndex === index ? "active" : ""}`}
-              onClick={() => goToSlide(index)}
-            ></div>
-          ))}
         </div>
       </div>
 

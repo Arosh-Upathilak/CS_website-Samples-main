@@ -65,10 +65,11 @@ const ContactSection = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                   
                     />
                 </div>
                 <div className="sendButton_container">
-                    <button type="submit" className="send_button">Send</button>
+                <button className="readMore_button">Send</button>
                 </div>
                 
             </form>

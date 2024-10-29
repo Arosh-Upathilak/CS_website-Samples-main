@@ -1,19 +1,19 @@
+body{
+    background-color: #fdfcfcf9;
+}
 .contact{
     margin-top: 120px;
-    background-image: url('../../../assests/images/contactUs_Background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-   
+    margin-bottom: 50px;
+
 }
 
 .contactForm_container{
-    background-color: #051D41;
+    background-color: #113d67;
     opacity: 83%;
     width: 47%;
     min-height: 73vh;
@@ -30,10 +30,10 @@
 }
 
 .contactUs_label{
-    font-family: "Inika", serif;
+    font-family: Inter;
     text-align:center;
     font-style: normal;
-    color:#E9CB2B;
+    color:#FFA300;
     font-weight:600;
     font-size: 26px;
     line-height: 32.12px;

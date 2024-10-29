@@ -85,8 +85,7 @@
     padding-left: 5%;
     padding-top: 0px;
     
-   
-
+    border-radius: 20px;
 }
 
 .grants_container1{
@@ -95,6 +94,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
 }
 
 .grants_container2{
@@ -107,6 +108,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 8%;
+    border-radius: 20px;
 }
 
 @media (max-width:1200px) {

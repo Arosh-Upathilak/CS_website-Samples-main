@@ -33,10 +33,10 @@ const Navbars = () => {
                     <NavDropdown.Item as={NavLink} to="/committee/pastcommitte">Past Committee</NavDropdown.Item>
                   </NavDropdown>
 
-                  <NavDropdown title="Feed" id="basic-nav-dropdown">
-                    <NavDropdown.Item as={NavLink} to="/Feed/News">News</NavDropdown.Item>
-                    <NavDropdown.Item as={NavLink} to="/Feed/Event">Event</NavDropdown.Item>
-                    <NavDropdown.Item as={NavLink} to="/Feed/Achivement">Achievement</NavDropdown.Item>
+                  <NavDropdown title="Event" id="basic-nav-dropdown">
+                    <NavDropdown.Item as={NavLink} to="/Event/UpComingEvent">Up Coming Event</NavDropdown.Item>
+                    <NavDropdown.Item as={NavLink} to="/Event/PastEvent">Past Event</NavDropdown.Item>  
+                    <NavDropdown.Item as={NavLink} to="/Event/Achivement">Achievement</NavDropdown.Item>
                   </NavDropdown>
 
                   <Nav.Link as={NavLink} to="/ContactUs" activeClassName="active">Contact Us</Nav.Link>
