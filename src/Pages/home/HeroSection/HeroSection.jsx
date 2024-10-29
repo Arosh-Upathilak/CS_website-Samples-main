@@ -41,7 +41,10 @@ const HeroSection = () => {
     <div>
       <div className="home_event">
         <div className="home_event_image">
-          <img src={images[currentIndex]} alt="home_event" />
+          <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+    <img src={images[currentIndex]} alt="home_event" />
+  </a>
+
           {/* Left Arrow */}
           <button className="arrow left-arrow" onClick={goToPrevSlide}>
   <FaArrowLeft />
