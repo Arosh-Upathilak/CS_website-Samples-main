@@ -22,4 +22,11 @@ const createPost = async (title, description, imageFile) => {
     }
 };
 
-export default createPost;
+const getAllPosts = async() =>{
+  const response = await axios.get( `${BASE_URL}/allposts`);
+  console.log(response)
+  return response;
+
+}
+
+export default {createPost , getAllPosts};

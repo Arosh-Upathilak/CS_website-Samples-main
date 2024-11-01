@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -39,11 +40,14 @@ public class PostService {
         return postMapper.toPostResponse(savedPost);
     }
 
-    public List<PostResponse> getAllPosts(){
-        return null;
-    }
 
-//    public PostResponse updatePost(PostRequest postRequest , Authentication connectedAdmin){
-//
-//    }
+
+    public List<PostResponse> getAllPosts() {
+
+        List<Post> posts = postRepository.findAll();
+        return posts.stream()
+            .map(postMapper::toPostResponse)
+            .collect(Collectors.toList());
+
+}
 }

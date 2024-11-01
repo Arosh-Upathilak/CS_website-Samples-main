@@ -9,6 +9,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/post")
 @RequiredArgsConstructor
@@ -24,9 +26,13 @@ public class PostController {
     ){
         System.out.println("calling");
 
-//        return ResponseEntity.ok(postService.createPost(postRequest));
-
         PostRequest postRequest = new PostRequest(title, description);
         return ResponseEntity.ok(postService.createPost(postRequest, imageFile));
+    }
+
+    @GetMapping("/allposts")
+    public ResponseEntity<List<PostResponse>> getAllPosts() {
+        List<PostResponse> posts = postService.getAllPosts();
+        return ResponseEntity.ok(posts);
     }
 }
