@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      username: ruwan
+      password: ruwan
+      host: localhost
+      port: 27017
+      database: CSDatabase
+      authentication-database: admin
