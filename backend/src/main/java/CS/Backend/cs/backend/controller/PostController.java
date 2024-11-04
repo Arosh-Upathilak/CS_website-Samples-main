@@ -18,11 +18,11 @@ import java.util.List;
 public class PostController {
 
     private final PostService postService;
-    @PostMapping("/createpost")
+    @PostMapping(value = "/createpost" )
     public ResponseEntity<PostResponse> createPost(
             @RequestParam("title") String title,
             @RequestParam("description") String description,
-            @RequestParam("image") MultipartFile imageFile
+            @RequestParam(value = "image", required= false) MultipartFile imageFile
     ){
         System.out.println("calling");
 
@@ -35,4 +35,6 @@ public class PostController {
         List<PostResponse> posts = postService.getAllPosts();
         return ResponseEntity.ok(posts);
     }
+
+
 }

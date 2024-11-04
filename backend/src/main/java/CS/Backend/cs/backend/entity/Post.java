@@ -3,6 +3,8 @@ package CS.Backend.cs.backend.entity;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -15,5 +17,9 @@ public class Post {
 
     String Description;
 
-    private String imageId;
+    LocalDateTime date;  // if date == today (category == previous)
+
+    String category; // upcoming  , previous
+
+    String imageId;
 }

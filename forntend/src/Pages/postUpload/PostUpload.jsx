@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./postUpload.css";
-import createposts from "../../services/PostService";
+import {createPost} from "../../services/PostService";
 
 const PostUpload = () => {
   const [title, setTitle] = useState("");
@@ -25,7 +25,7 @@ const PostUpload = () => {
   };
 
   const handleUpload = async () => {
-    const response = await createposts(title, description, image);
+    const response = await createPost(title, description, image);
     if (response.error) {
       console.error("Error uploading post:", response.error);
     } else {
