@@ -50,6 +50,7 @@ const PostView = () => {
                                 <li key={post.id} className="post-item">
                                     <h2>Topic : {post.title}</h2>
                                     <p>Description : {post.description.replace(/<\/?p>/g, '')}</p>
+                                    <Link to={post.link}>{post.link}</Link>
                                     {post.imageId && (
                                         <img 
                                             src={getImageUrl(post.imageId)} 

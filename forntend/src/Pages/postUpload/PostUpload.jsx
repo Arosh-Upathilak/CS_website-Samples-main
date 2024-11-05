@@ -12,6 +12,7 @@ import ErrorModal from '../Error/ErrorModal';
 const PostUpload = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [link, setLink] = useState(""); // State for the link
   const [image, setImage] = useState(null);
   const [date, setDate] = useState(new Date()); 
   const [message, setMessage] = useState(""); 
@@ -43,8 +44,16 @@ const PostUpload = () => {
   const handleUpload = async () => {
     setError(""); 
     setMessage(""); // Clear any previous messages
+
+    // Basic validation for the link
+    if (link && !/^https?:\/\//.test(link)) {
+      setError("Link must start with http:// or https://");
+      setIsModalOpen(true);
+      return; // Exit the function if the link is invalid
+    }
+
     const formattedDate = formatDateForUpload(date); 
-    const response = await createPost(title, description, image, formattedDate); 
+    const response = await createPost(title, description, image, formattedDate, link); // Pass link as an argument
 
     if (response.error) {
       console.error("Error uploading post:", response.error);
@@ -61,6 +70,7 @@ const PostUpload = () => {
   const clearFields = () => {
     setTitle("");
     setDescription("");
+    setLink(""); // Clear the link field
     setImage(null);
     setDate(new Date());
     if (fileInputRef.current) {
@@ -95,6 +105,13 @@ const PostUpload = () => {
             className="input-box"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Post Link" // New link input field
+            className="input-box"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
           />
           <ReactQuill
             value={description}
