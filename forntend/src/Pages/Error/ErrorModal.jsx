@@ -11,5 +11,6 @@ const ErrorModal = ({ message, onClose }) => {
     </div>
   );
 };
+  
 
 export default ErrorModal;
