@@ -23,6 +23,7 @@ public class PostController {
             @RequestParam("title") String title,
             @RequestParam("description") String description,
             @RequestParam(value = "image", required= false) MultipartFile imageFile
+
     ){
         System.out.println("calling");
 

@@ -7,8 +7,7 @@ export const createPost = async (title, description, imageFile) => {
         const formData = new FormData();
         formData.append("title", title);
         formData.append("description", description);
-        formData.append("image", imageFile); // Make sure this matches your controller's expected parameter name
-
+        formData.append("image", imageFile); 
         const response = await axios.post(`${BASE_URL}/createpost`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
@@ -22,11 +21,26 @@ export const createPost = async (title, description, imageFile) => {
     }
 };
 
-export const getAllPosts = async() =>{
-  const response = await axios.get( `${BASE_URL}/allposts`);
-  console.log(response)
-  return response;
+export const getAllPosts = async () => {
+    try {
+      const response = await axios.get(`${BASE_URL}/allposts`);
+      return response.data; 
+    } catch (error) {
+      console.error("Error fetching posts:", error);
+      return { error: error.message }; 
+    }
+  };
 
-}
+  
+  export const deletePost = async (postId) => {
+    try {
+      await axios.delete(`${BASE_URL}/deletepost/${postId}`);
+      return { success: true };
+    } catch (error) {
+      console.error("Error deleting post:", error);
+      return { error: error.message };
+    }
+  };
+    
 
 

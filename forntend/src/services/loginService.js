@@ -8,8 +8,9 @@ const loginUser = async (email, password) => {
       email,
       password,
     });
+    console.log("User logged in successfully:", response);
    
-    return response; // Return response data if needed
+    return response;
   } catch (error) {
     console.log("Error while logging in user:", error.message);
     return { error: error.message };

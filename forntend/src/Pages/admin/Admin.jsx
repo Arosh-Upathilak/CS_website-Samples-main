@@ -9,18 +9,24 @@ const Admin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
-    const navigate = useNavigate();  // Initialize navigate
+    const [showDialog, setShowDialog] = useState(false);  
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         const response = await loginUser(email, password);
         if (response.status === 200) {
-        
             navigate('/admin/postUpload');
         } else if (response.error) {
             setError(response.error);
+            setShowDialog(true);  
         } else {
             console.log("Login successful:", response);
         }
+    };
+
+    const closeDialog = () => {
+        setShowDialog(false);
+        setError(null); 
     };
 
     return (
@@ -42,9 +48,18 @@ const Admin = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     className='password-input'
                 />
-                {error && <p className="error-message">{error}</p>}
                 <button className="login-button" onClick={handleLogin}>Login</button>
             </div>
+
+            {/* Error Dialog */}
+            {showDialog && (
+                <div className="dialog-overlay">
+                    <div className="dialog-box">
+                        <p className="error-message">{error}</p>
+                        <button className="dialog-close-button" onClick={closeDialog}>Close</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
