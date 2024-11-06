@@ -9,6 +9,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @RestController
@@ -22,12 +24,18 @@ public class PostController {
     public ResponseEntity<PostResponse> createPost(
             @RequestParam("title") String title,
             @RequestParam("description") String description,
+            @RequestParam(value = "link", required= false) String link,
+            @RequestParam(value = "eventdate") String eventDateString,
             @RequestParam(value = "image", required= false) MultipartFile imageFile
 
     ){
         System.out.println("calling");
 
-        PostRequest postRequest = new PostRequest(title, description);
+        //Typecasting (convert stringDate to LocalDate)
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate eventDate = LocalDate.parse(eventDateString, formatter);
+
+        PostRequest postRequest = new PostRequest(title, description , link ,eventDate);
         return ResponseEntity.ok(postService.createPost(postRequest, imageFile));
     }
 

@@ -12,6 +12,8 @@ public class PostMapper {
         return Post.builder()
                 .title(postRequest.getTitle())
                 .Description(postRequest.getDescription())
+                .link(postRequest.getLink())
+                .eventDate(postRequest.getEventDate())
                 .imageId(imageId)
                 .build();
     }
@@ -20,6 +22,8 @@ public class PostMapper {
         return PostResponse.builder()
                 .title(post.getTitle())
                 .Description(post.getDescription())
+                .link(post.getLink())
+                .category(post.getCategory())
                 .imageId(post.getImageId())
                 .build();
     }

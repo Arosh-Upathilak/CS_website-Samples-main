@@ -14,5 +14,9 @@ public class PostResponse {
 
     String Description;
 
+    String link;
+
+    String category;
+
     private String imageId;
 }

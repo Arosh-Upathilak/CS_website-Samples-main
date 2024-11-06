@@ -2,12 +2,15 @@ import axios from "axios";
 
 const BASE_URL = "http://localhost:8080/api/v1/post";
 
-export const createPost = async (title, description, imageFile) => {
+export const createPost = async (title, description, imageFile , formattedDate ,link) => {
     try {
         const formData = new FormData();
         formData.append("title", title);
         formData.append("description", description);
-        formData.append("image", imageFile); 
+        formData.append("eventdate", formattedDate);
+        formData.append("link" , link)
+        formData.append("image", imageFile);
+
         const response = await axios.post(`${BASE_URL}/createpost`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data",

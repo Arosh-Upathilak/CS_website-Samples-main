@@ -3,6 +3,7 @@ package CS.Backend.cs.backend.entity;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -12,14 +13,18 @@ import java.time.LocalDateTime;
 @Builder
 @Document(collection  = "post")
 public class Post {
-    String id;
-    String title;
 
-    String Description;
+    private String id;
 
-    LocalDateTime date;  // if date == today (category == previous)
+    private String title;
 
-    String category; // upcoming  , previous
+    private String Description;
 
-    String imageId;
+    private LocalDate eventDate;  // if date == today (category == previous)
+
+    private String category; // upcoming  , previous
+
+    private String link;
+
+    private String imageId;
 }
