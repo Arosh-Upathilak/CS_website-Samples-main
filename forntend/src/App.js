@@ -1,6 +1,7 @@
 import React from 'react'
 import {Routes , Route} from "react-router-dom"
 import {Home , AboutUs, Contact,NewCommittee ,PastCommittee,Achivement,Admin,PostUpload,PostView,PastEvent,Upcoming}from './Pages'
+import PostsDisplay from './Pages/SampleRuwan/PostsDisplay'
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/admin' element={<Admin/>}/>
         <Route path='/admin/postUpload' element={<PostUpload/>}/>
         <Route path='/admin/postView' element={<PostView/>}/>
+        <Route path='/sample' element={<PostsDisplay/>}/>
     </Routes>
   )
 }

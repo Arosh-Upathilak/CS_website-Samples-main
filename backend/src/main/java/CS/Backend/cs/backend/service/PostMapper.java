@@ -18,7 +18,18 @@ public class PostMapper {
                 .build();
     }
 
-    public PostResponse toPostResponse(Post post){
+    public PostResponse toPostResponse(Post post, String imageData) {
+        return PostResponse.builder()
+                .title(post.getTitle())
+                .Description(post.getDescription())
+                .link(post.getLink())
+                .category(post.getCategory())
+                .imageId(post.getImageId())
+                .imageData(imageData)  // Add Base64 image data to the response
+                .build();
+    }
+
+    public PostResponse toOnePostResponse(Post post){
         return PostResponse.builder()
                 .title(post.getTitle())
                 .Description(post.getDescription())

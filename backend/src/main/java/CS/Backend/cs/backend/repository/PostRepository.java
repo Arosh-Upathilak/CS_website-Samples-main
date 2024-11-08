@@ -14,4 +14,5 @@ public interface PostRepository extends MongoRepository<Post, String> {
 
     @Query("{ 'eventdate': { $gte: ?0 }, 'category': 'previous' }")
     List<Post> findFuturePreviousPosts(LocalDate today);
+
 }

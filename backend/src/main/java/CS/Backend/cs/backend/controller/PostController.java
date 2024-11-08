@@ -3,12 +3,17 @@ package CS.Backend.cs.backend.controller;
 import CS.Backend.cs.backend.RequestResponse.PostRequest;
 import CS.Backend.cs.backend.RequestResponse.PostResponse;
 import CS.Backend.cs.backend.service.PostService;
+import com.mongodb.client.gridfs.model.GridFSFile;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.data.mongodb.gridfs.GridFsResource;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
