@@ -29,6 +29,7 @@ const PostsDisplay = () => {
             {posts.map((post) => (
                 <div key={post.id} style={{ border: "1px solid #ccc", padding: "1em", margin: "1em 0" }}>
                     <h2>{post.title}</h2>
+                    <h2>hi{post.eventDate}</h2>
                     <p dangerouslySetInnerHTML={{ __html: post.description }} />
                     {post.imageData && (
                         <img 

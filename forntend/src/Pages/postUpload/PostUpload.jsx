@@ -43,17 +43,17 @@ const PostUpload = () => {
 
   const handleUpload = async () => {
     setError(""); 
-    setMessage(""); // Clear any previous messages
+    setMessage(""); 
 
-    // Basic validation for the link
-    if (link && !/^https?:\/\//.test(link)) {
-      setError("Link must start with http:// or https://");
+    if (link && !/^(https?:\/\/|www\.)/.test(link)) {
+      setError("Link must start with http://, https://, or www.");
       setIsModalOpen(true);
-      return; // Exit the function if the link is invalid
+      return; 
     }
+    
 
     const formattedDate = formatDateForUpload(date); 
-    const response = await createPost(title, description, image, formattedDate, link); // Pass link as an argument
+    const response = await createPost(title, description, image, formattedDate, link);
 
     if (response.error) {
       console.error("Error uploading post:", response.error);
@@ -61,8 +61,8 @@ const PostUpload = () => {
       setIsModalOpen(true); 
     } else {
       console.log("Post uploaded successfully:", response);
-      setMessage("Post uploaded successfully!"); // Set success message
-      setIsModalOpen(true); // Open modal for success message
+      setMessage("Post uploaded successfully!"); 
+      setIsModalOpen(true); 
     }
     clearFields();
   };
@@ -70,7 +70,7 @@ const PostUpload = () => {
   const clearFields = () => {
     setTitle("");
     setDescription("");
-    setLink(""); // Clear the link field
+    setLink(""); 
     setImage(null);
     setDate(new Date());
     if (fileInputRef.current) {
@@ -108,7 +108,7 @@ const PostUpload = () => {
           />
           <input
             type="text"
-            placeholder="Post Link" // New link input field
+            placeholder="Post Link" 
             className="input-box"
             value={link}
             onChange={(e) => setLink(e.target.value)}

@@ -2,34 +2,43 @@ import React, { useState, useEffect } from "react";
 import "./heroSection.css";
 import ContactUs from "../../../components/ContactUs/ContactUs";
 import { Link } from "react-router-dom";
-import Image1 from "../../../assests/images/UOJCoders.jpg";
-import Image2 from "../../../assests/images/image2.jpg"; 
-import Image3 from "../../../assests/images/image3.jpg";
-import Image4 from "../../../assests/images/image4.jpg";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
-
+import { getAllPosts } from "../../../services/PostService"; 
 
 const HeroSection = () => {
-  const images = [Image1, Image2, Image3, Image4];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [posts, setPosts] = useState([]);  
+  const [currentIndex, setCurrentIndex] = useState(0);  
 
+  const fetchPosts = async () => {
+    const response = await getAllPosts();  
+    if (response.error) {
+      console.error(response.error);  
+    } else {
+      const today = new Date().toISOString().split('T')[0];
+
+      const futurePosts = response.filter(post => post.eventDate > today);
+
+      setPosts(futurePosts); 
+    }
+  };
 
   useEffect(() => {
+    fetchPosts();  
+
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % posts.length);  
     }, 5000);
-    return () => clearInterval(interval);
-  }, [currentIndex, images.length]);
-  
+    
+    return () => clearInterval(interval);  
+  }, [posts.length]);  
 
   const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % posts.length);
   };
 
   const goToPrevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? posts.length - 1 : prevIndex - 1
     );
   };
 
@@ -41,22 +50,29 @@ const HeroSection = () => {
     <div>
       <div className="home_event">
         <div className="home_event_image">
-          <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-    <img src={images[currentIndex]} alt="home_event" />
-  </a>
+          {posts.length > 0 && (
+            <Link to={posts[currentIndex]?.link || "#"} target="_blank" rel="noopener noreferrer">
+              {posts[currentIndex]?.imageData && (
+                <img
+                  src={`data:image/jpeg;base64,${posts[currentIndex]?.imageData}`}
+                  alt={posts[currentIndex]?.title}
+                  style={{ width: "200%", height: "90%" }}
+                  className="post-image"
+                />
+              )}
+            </Link>
+          )}
 
-          {/* Left Arrow */}
           <button className="arrow left-arrow" onClick={goToPrevSlide}>
-  <FaArrowLeft />
-</button>
+            <FaArrowLeft />
+          </button>
 
-<button className="arrow right-arrow" onClick={goToNextSlide}>
-  <FaArrowRight />
-</button>
+          <button className="arrow right-arrow" onClick={goToNextSlide}>
+            <FaArrowRight />
+          </button>
 
-          {/* Dots for each image */}
           <div className="dots-container">
-            {images.map((_, index) => (
+            {posts.map((_, index) => (
               <span
                 key={index}
                 className={`dot ${index === currentIndex ? "active" : ""}`}

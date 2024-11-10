@@ -25,7 +25,8 @@ public class PostMapper {
                 .link(post.getLink())
                 .category(post.getCategory())
                 .imageId(post.getImageId())
-                .imageData(imageData)  // Add Base64 image data to the response
+                .imageData(imageData)
+                .eventDate(post.getEventDate())
                 .build();
     }
 
