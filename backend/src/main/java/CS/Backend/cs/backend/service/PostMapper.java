@@ -20,6 +20,7 @@ public class PostMapper {
 
     public PostResponse toPostResponse(Post post, String imageData) {
         return PostResponse.builder()
+                .postID(post.getId())
                 .title(post.getTitle())
                 .Description(post.getDescription())
                 .link(post.getLink())
