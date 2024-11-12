@@ -38,8 +38,18 @@ public class PostService {
         } catch (IOException e) {
             throw new RuntimeException("Error storing image in MongoDB GridFS: " + e.getMessage(), e);
         }
+
+        LocalDate today = LocalDate.now();
+        String category;
+        if (postRequest.getEventDate().isAfter(today)) {
+            category = "upcoming";
+        } else {
+            category = "previous";
+        }
+
         Post post = postMapper.toPost(postRequest, imageId);
         post.setImageId(imageId);
+        post.setCategory(category);
         Post savedPost = postRepository.save(post);
 
         return postMapper.toOnePostResponse(savedPost);
@@ -112,7 +122,6 @@ public class PostService {
 
 
     //External Functions
-
     // Updates categories based on event date
     public void updatePostCategories() {
         LocalDate today = LocalDate.now();
