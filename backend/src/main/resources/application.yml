@@ -1,0 +1,24 @@
+#spring:
+#  data:
+#    mongodb:
+#      username: ruwan
+#      password: ruwan
+#      host: localhost
+#      port: 27017
+#      database: CSDatabase
+#      authentication-database: admin
+
+#WLB4vub8I7ZFN0FHd
+
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://Ruwan_Pradeep:LB4vub8I7ZFN0FHd@cluster0.q1cnm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: CS_Post
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB

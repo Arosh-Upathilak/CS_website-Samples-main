@@ -1,0 +1,260 @@
+.home_event {
+  margin-top: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25rem;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #f0f0f0;
+}
+
+.home_event_image {
+  margin: 0 5%;
+  width: 100%;
+  height: 25rem; 
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.home_event_image img {
+  padding: 0 5%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+  display: block;
+  margin: 0;
+}
+
+
+.arrow {
+  background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+
+
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+
+.dots-container {
+  position: relative;
+  margin-top:  25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #FFA300;
+}
+
+
+
+.aboutUs_container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    align-items: stretch;
+    padding: 40px;
+    background-color: #f0f0f0;
+    border-color: #FFA300;
+    border-width: 3px;
+}
+
+.aboutUs_text {
+    background-color: #FFA300;
+    color: white;
+    flex: 0.2;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: Inter;
+    font-weight: 600;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.aboutUs_description {
+    flex: 0.8;
+    text-align: center;
+    margin: 0 40px;
+    animation: slideInRight 1.5s forwards;
+}
+
+.aboutUs_description h1 {
+    color: #113d67;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.aboutUs_description p {
+    color: black;
+    font-weight: 700;
+    font-family: Inter;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+.readMore_button {
+    
+    background-color: #FFA300;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    font-family: Inter;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #fff;
+    font-weight: bold;
+}
+
+.readMore_button:hover {
+    background-color: #f5b61e;
+    transform: translateY(-3px);
+}
+
+  .slider_container{
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #F8AF41;
+  }
+  
+  .events_hero {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .event_hero {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%; 
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50vh;
+  }
+
+  .event_hero p{
+    margin-left: 50px;
+  }
+
+  .prev_button, .next_button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  .prev_button {
+    left: 10px;
+  }
+  
+  .next_button {
+    right: 10px;
+  }
+  
+  .prev_button:hover, .next_button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .dots_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #FFA300;
+}
+  
+
+
+
+
+  @media (max-width: 500px){
+    .text_container h1 {
+        font-size: 30px;
+        width: 100%;
+    }
+    .aboutUs_container{
+        height: 35rem;
+    }
+    .aboutUs_description h1 {
+        font-size: 20px;
+    }
+    .aboutUs_description p {
+        font-size: 10px;
+    }
+    .readMore_button{
+        padding: 5px 10px;
+        font-size: 10px;
+        font-weight: none;
+
+    }
+  }
+
+  .Event_container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .Event_container h1{
+    text-align: center;
+
+  }
