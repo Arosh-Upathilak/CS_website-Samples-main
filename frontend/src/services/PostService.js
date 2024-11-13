@@ -11,11 +11,15 @@ export const createPost = async (title, description, imageFile , formattedDate ,
         formData.append("link" , link)
         formData.append("image", imageFile);
 
+        console.log(formData)
+
         const response = await axios.post(`${BASE_URL}/createpost`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
         });
+
+        console.log(response.data)
 
         return response.data;
     } catch (error) {

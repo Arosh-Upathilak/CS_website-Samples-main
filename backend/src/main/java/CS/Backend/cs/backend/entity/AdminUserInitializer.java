@@ -17,7 +17,7 @@ public class AdminUserInitializer implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        // Create admin users
+
         createAdminIfNotExists("admin1@example.com", "Admin1", "User", "adminPassword1");
         createAdminIfNotExists("admin2@example.com", "Admin2", "User", "adminPassword2");
         createAdminIfNotExists("admin3@example.com", "Admin3", "User", "adminPassword3");

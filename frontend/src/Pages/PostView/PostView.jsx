@@ -64,7 +64,7 @@ const PostView = () => {
                                             Edit
                                         </button>
                                         <button
-                                            onClick={() => handleDelete(post.id)}
+                                            onClick={() => handleDelete(post.postID)}
                                             className="delete-button"
                                         >
                                             Delete

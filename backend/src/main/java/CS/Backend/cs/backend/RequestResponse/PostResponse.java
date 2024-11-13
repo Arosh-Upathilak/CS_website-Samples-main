@@ -13,6 +13,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostResponse {
+
+    private String postID;
+
     private String title;
 
     private String Description;
@@ -23,7 +26,7 @@ public class PostResponse {
 
     private String imageId;
 
-    private String imageData;
-
     private LocalDate eventDate;
+
+    private String imageData;
 }

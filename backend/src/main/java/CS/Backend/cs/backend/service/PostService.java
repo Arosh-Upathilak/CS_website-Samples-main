@@ -38,14 +38,24 @@ public class PostService {
         } catch (IOException e) {
             throw new RuntimeException("Error storing image in MongoDB GridFS: " + e.getMessage(), e);
         }
+
+        LocalDate today = LocalDate.now();
+        String category;
+        if (postRequest.getEventDate().isAfter(today)) {
+            category = "upcoming";
+        } else {
+            category = "previous";
+        }
+
         Post post = postMapper.toPost(postRequest, imageId);
         post.setImageId(imageId);
+        post.setCategory(category);
         Post savedPost = postRepository.save(post);
 
         return postMapper.toOnePostResponse(savedPost);
     }
 
-    // Retrieves all posts
+    // Retrieves all posts From mongodbDB database
     public List<PostResponse> getAllPosts() {
         List<Post> posts = postRepository.findAll();
         return posts.stream().map(post -> {
@@ -65,11 +75,53 @@ public class PostService {
                     e.printStackTrace();
                 }
             }
-            return postMapper.toPostResponse(post, imageData);  // Pass imageData to the mapper
+            return postMapper.toPostResponse(post, imageData);
         }).collect(Collectors.toList());
     }
 
+    private String saveImage(MultipartFile imageFile) {
+        try {
+            return gridFsTemplate.store(
+                    imageFile.getInputStream(),
+                    imageFile.getOriginalFilename(),
+                    imageFile.getContentType()
+            ).toString();
+        } catch (IOException e) {
+            throw new RuntimeException("Error storing image in MongoDB GridFS: " + e.getMessage(), e);
+        }
+    }
 
+    public PostResponse updatePost(String postId, PostRequest postRequest, MultipartFile imageFile) {
+        Post existingPost = postRepository.findById(postId)
+                .orElseThrow(() -> new IllegalArgumentException("Post with ID " + postId + " not found."));
+
+        existingPost.setTitle(postRequest.getTitle());
+        existingPost.setDescription(postRequest.getDescription());
+        existingPost.setLink(postRequest.getLink());
+        existingPost.setEventDate(postRequest.getEventDate());
+
+        if (imageFile != null && !imageFile.isEmpty()) {
+            // Save the new image and update the image ID
+            String newImageId = saveImage(imageFile);
+            existingPost.setImageId(newImageId);
+        }
+
+        // Save the updated post
+        Post savedPost = postRepository.save(existingPost);
+        return postMapper.toOnePostResponse(savedPost);
+    }
+
+    public void deletePost(String postId) {
+        if(postRepository.existsById(postId)){
+            postRepository.deleteById(postId);
+        }else {
+            throw new IllegalArgumentException("Post with ID " + postId + " not found.");
+        }
+    }
+
+
+
+    //External Functions
     // Updates categories based on event date
     public void updatePostCategories() {
         LocalDate today = LocalDate.now();
@@ -85,11 +137,14 @@ public class PostService {
         postRepository.saveAll(futurePosts);
     }
 
+
     // Scheduled task to update categories every day at midnight
     @Scheduled(cron = "0 0 0 * * ?") // Runs daily at midnight
     public void scheduledUpdatePostCategories() {
         updatePostCategories();
     }
+
+
 
 
 
