@@ -6,7 +6,7 @@ Welcome to the official repository of the **IEEE Computer Society, University of
 
 ## 🚀 Website
 
-Visit the live website: [cs-website-uoj.netlify.app](https://cs-website-uoj.netlify.app/aboutUs)
+Visit the live website: [cs-website-uoj.netlify.app](https://cs-website-uoj.netlify.app)
 
 ---
 
